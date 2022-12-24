@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<body>
+
+</body>
+<script>
+    function pula(linhas) {
+        if (linhas == null) linhas = 1;
+        for (let i = 0; i < linhas; i++) {
+            document.write('<br>');
+        }
+    }
+
+    function mostra(txt) {
+        document.write(txt);
+        pula()
+    }
+
+    var ano = 2016;
+
+    //document.write("Flávio tem " + (ano - 1977) + " anos");
+    mostra("Flávio tem " + (ano - 1977) + " anos")
+    //pula();
+    //document.write("Joaquim tem " + (ano - 1996) + " anos");
+    mostra("Joaquim tem " + (ano - 1996) + " anos")
+    //pula(2);
+
+    ano = 2017;
+    //document.write("Barney tem " + (ano - 1976) + " anos");
+    mostra("Barney tem " + (ano - 1976) + " anos")
+
+</script>
