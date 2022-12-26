@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<body></body>
+
+<script>
+    function pula(linhas) {
+        if (linhas == null) linhas = 1;
+        for (let i = 0; i < linhas; i++) {
+            document.write('<br>');
+        }
+    }
+
+    function mostra(txt) {
+        document.write(txt);
+        pula()
+    }
+
+    function calculaImc(peso, altura) {
+        altura = altura / 100
+        var imc = Math.round(peso / (altura * altura));
+        return imc;
+    }
+
+    var vitorias = parseInt(prompt("Entre com o número de vitórias"));
+    var empates = parseInt(prompt("Entre com o número de empates"));
+    //var empates = prompt("Entre com o número de empates") * 1;
+    var pontos = vitorias * 3 + empates ;
+    //var alturaIn = prompt(nome + ', informe sua altura:');
+
+    mostra("Seu time tem " + pontos + " pontos.");
+
+
+
+</script>

@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<body></body>
+
+<script>
+    function pula(linhas) {
+        if (linhas == null) linhas = 1;
+        for (let i = 0; i < linhas; i++) {
+            document.write('<br>');
+        }
+    }
+
+    function mostra(txt) {
+        document.write(txt);
+        pula()
+    }
+
+var numeroPensado = 5;
+var chute = parseInt(prompt("Digite seu chute de 1 a 10: "))
+
+    //var nome = prompt('Qual seu nome?')
+    //var pesoIn = prompt(nome + ', informe seu peso:');
+    //var alturaIn = prompt(nome + ', informe sua altura:');
+//var imc = calculaImc(pesoIn, alturaIn)
+  //  mostra(nome + ", seu imc é " + imc + ".");
+
+    if(numeroPensado == chute){
+        mostra("Voce acertou!")
+    }else{
+        mostra("Você errou!!")
+    }
+    //if(imc > 35){mostra("Voce esta acima do peso recomendado!")}
+    //if(imc > 18.5 && imc <35){mostra("Voce esta na faixa do peso recomendado!")}
+    
+
+</script>

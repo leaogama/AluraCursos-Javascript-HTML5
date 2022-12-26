@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<body>
+
+</body>
+<script>
+    function pula(linhas) {
+        if (linhas == null) linhas = 1;
+        for (let i = 0; i < linhas; i++) {
+            document.write('<br>');
+        }
+    }
+
+    function mostra(txt) {
+        document.write(txt);
+        pula()
+    }
+    function calculaImc(peso, altura) {
+        var imc = Math.round(peso / (altura * altura));
+        return imc;
+    }
+
+
+    mostra("Flávio tem imc " + calculaImc(102, 1.83) + ".");
+    mostra("Amigo tem imc " + calculaImc(73, 1.71) + ".");
+
+
+</script>
