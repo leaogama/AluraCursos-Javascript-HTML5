@@ -1,4 +1,5 @@
 <meta charset="UTF-8">
+
 <body></body>
 
 <script>
@@ -11,25 +12,17 @@
 
     function mostra(txt) {
         document.write(txt);
-        pula()
+        pula();
     }
 
-var numeroPensado = 5;
-var chute = parseInt(prompt("Digite seu chute de 1 a 10: "))
+    var numeroPensado = Math.round(Math.random()*10);
+    var chute = parseInt(prompt("Digite seu chute de 1 a 10: "));
 
-    //var nome = prompt('Qual seu nome?')
-    //var pesoIn = prompt(nome + ', informe seu peso:');
-    //var alturaIn = prompt(nome + ', informe sua altura:');
-//var imc = calculaImc(pesoIn, alturaIn)
-  //  mostra(nome + ", seu imc é " + imc + ".");
-
-    if(numeroPensado == chute){
-        mostra("Voce acertou!")
-    }else{
-        mostra("Você errou!!")
+    if (numeroPensado == chute) {
+        mostra("Voce acertou!");
+    } else {
+        mostra("Você errou!! O número pensado foi: " + numeroPensado);
     }
-    //if(imc > 35){mostra("Voce esta acima do peso recomendado!")}
-    //if(imc > 18.5 && imc <35){mostra("Voce esta na faixa do peso recomendado!")}
-    
+
 
 </script>
