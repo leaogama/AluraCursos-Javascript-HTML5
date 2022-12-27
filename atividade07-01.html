@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<body></body>
+<script>
+    function pula(linhas) {
+        if (linhas == null) linhas = 1;
+        for (let i = 0; i < linhas; i++) {
+            document.write('<br>');
+        }
+    }
+
+    function mostra(txt) {
+        document.write(txt);
+        pula();
+    }
+
+    var limite = parseInt(prompt("Descubra o ano das copas até o ano de: "));
+    var anoCopa = 1930;
+    while (anoCopa <= limite) {
+        mostra(anoCopa);
+        anoCopa = anoCopa + 4;
+    }
+mostra("fim!")
+</script>

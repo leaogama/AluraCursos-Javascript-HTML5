@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<body></body>
+<script>
+    function pula(linhas) {
+        if (linhas == null) linhas = 1;
+        for (let i = 0; i < linhas; i++) {
+            document.write('<br>');
+        }
+    }
+
+    function mostra(txt) {
+        document.write(txt);
+        pula();
+    }
+
+    var ini = 30;
+    var fim = 40;
+    while (ini <= fim) {
+        if(ini != 33 && ini != 37){
+        mostra(ini);
+    }
+        ini++
+    }
+mostra("FIM")
+</script>

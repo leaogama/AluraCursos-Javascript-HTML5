@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<body></body>
+<script>
+    function pula(linhas) {
+        if (linhas == null) linhas = 1;
+        for (let i = 0; i < linhas; i++) {
+            document.write('<br>');
+        }
+    }
+
+    function mostra(txt) {
+        document.write(txt);
+        pula();
+    }
+    var acumulaIdadeFamiliares = 0;
+    var idadeDoFamiliar = 0;
+    var totalFamiliares = parseInt(prompt("Quantos são os seus familiares? "));
+
+    while (isNaN(totalFamiliares)) {
+        totalFamiliares = parseInt(prompt("Quantos são os seus familiares? "));
+    }
+
+    for (let i = 1; i <= totalFamiliares; i++) {
+        idadeDoFamiliar = parseInt(prompt("Idade do parente " + i))
+        mostra(`Parente ${i} tem ${idadeDoFamiliar} anos.`)
+        acumulaIdadeFamiliares = acumulaIdadeFamiliares + idadeDoFamiliar;
+    }
+    var mediaIdadeFamiliares = acumulaIdadeFamiliares / totalFamiliares;
+    document.write("A média das idades dos seus " + totalFamiliares + " familiares é " + mediaIdadeFamiliares + "<br>");
+
+    mostra("FIM")
+
+</script>

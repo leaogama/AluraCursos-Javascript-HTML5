@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<body></body>
+<script>
+    function pula(linhas) {
+        if (linhas == null) linhas = 1;
+        for (let i = 0; i < linhas; i++) {
+            document.write('<br>');
+        }
+    }
+
+    function mostra(txt) {
+        document.write(txt);
+        pula();
+    }
+    var ini = 1;
+    var fim = 10;
+    var num = parseInt(prompt("Tabuada do: "));
+
+    while (isNaN(num)) {
+        num = parseInt(prompt("Tabuada do: "));
+    }
+    // while (ini <= fim) {
+    //     mostra(num * ini);
+    //     ini++
+    // }
+
+    for (let i = 1; i <= fim; i++) {
+        mostra(num * i);
+    }
+
+
+    mostra("FIM")
+
+</script>

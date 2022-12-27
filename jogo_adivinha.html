@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<body></body>
+<script>
+    function pula(linhas) {
+        if (linhas == null) linhas = 1;
+        for (let i = 0; i < linhas; i++) {
+            document.write('<br>');
+        }
+    }
+
+    function mostra(txt) {
+        document.write(txt);
+        pula();
+    }
+
+    function sorteia(n) {
+        return Math.round(Math.random() * n);
+    }
+
+    var limite = 2;
+    var numeroPensado = sorteia(limite);
+    var chute = parseInt(prompt(`Pensei em um número de 0 a ${limite}, chute qual é: `));
+
+    if (numeroPensado > chute) {
+        mostra("O número é maior!! Eu tinha pensado no " + numeroPensado);
+    } else if (numeroPensado < chute) {
+        mostra("O número é menor!! Eu tinha pensado no " + numeroPensado);
+    } else {
+        mostra("Uau! Você acertou pois eu pensei no " + numeroPensado);
+    }
+
+</script>
