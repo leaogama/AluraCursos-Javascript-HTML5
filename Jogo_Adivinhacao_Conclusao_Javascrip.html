@@ -1,0 +1,67 @@
+<meta charset="UTF-8">
+
+<body>
+    <h1 id="a">Digite um número</h1>
+    <input />
+    <button>Compare com meu segredo</button>
+</body>
+<script>
+
+    //var segredo = Math.round(Math.random()*10);
+    //var segredos = [5, 7, 10, 2, 3,111]
+    var segredos = [];
+    var quantosSegredos = 5;
+    var deUmAte = 10;
+
+    while (quantosSegredos > 0) {
+        var duplicado = false;
+        var segredoTemp = sorteia(deUmAte);
+        for (let i = 0; i < segredos.length; i++) {
+            const element = segredos[i];
+            if (segredoTemp == element){
+                duplicado = true;
+                //quantosSegredos++
+                break;
+            } 
+        }
+        if(duplicado == false && parseInt(segredoTemp) != 0){
+        segredos.push(segredoTemp);
+        quantosSegredos-- 
+        }
+        
+    }
+
+    function sorteia(limite) {
+        return Math.round(Math.random() * limite)
+    }
+
+    console.log(segredos);
+
+
+
+    //********************************
+    var h1a = document.querySelector('h1[id="a"]');
+    var input = document.querySelector("input");
+    input.value = "";
+    input.focus();
+    var button = document.querySelector("button");
+    button.onclick = verifica;
+
+    function verifica() {
+
+        for (let i = 0; i < segredos.length; i++) {
+            //document.write(segredos[i] + "<br>");
+
+            if (input.value == segredos[i]) {
+                h1a.textContent = "Parabéns, você acertou!!";
+                break;
+
+            } else {
+                h1a.textContent = "Você errou!!!";
+            }
+        }
+        input.value = "";
+        input.focus();
+    }
+
+</script>

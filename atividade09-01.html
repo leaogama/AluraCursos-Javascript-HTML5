@@ -7,20 +7,29 @@
 </body>
 <script>
 
-    var segredo = Math.round(Math.random()*10);
+    //var segredo = Math.round(Math.random()*10);
+    var segredos = [5, 7, 10, 2, 3,111]
     var h1a = document.querySelector('h1[id="a"]');
     var input = document.querySelector("input");
+
+
     input.value = "";
     input.focus();
     var button = document.querySelector("button");
     button.onclick = verifica;
 
     function verifica() {
-        if (input.value == segredo) {
-            h1a.textContent = "Parabéns, voce acertou!!";
 
-        } else {
-            h1a.textContent = "Voce errou!!!";
+        for (let i = 0; i < segredos.length; i++) {
+            //document.write(segredos[i] + "<br>");
+
+            if (input.value == segredos[i]) {
+                h1a.textContent = "Parabéns, voce acertou!!";
+                break;
+
+            } else {
+                h1a.textContent = "Voce errou!!!";
+            }
         }
         input.value = "";
         input.focus();
